@@ -1,0 +1,6 @@
+<%= render("nav", toys: @toys) %>
+<h1>Toy <%= params[:id] %></h1>
+<h2><%= @toys.find(params[:id])[:name] %></h2>
+<p>- <%= @toys.find(params[:id])[:description] %>.</p>
+<p>- Released on <%= @toys.find(params[:id])[:date] %>.</p>
+<p>- Posted by <%= @toys.find(params[:id])[:user] %>.</p>

@@ -1,0 +1,5 @@
+<%= render("nav", toys: @toys) %>
+<h1>All Toys</h1>
+<% for toy in @toys %>
+    <p>- <%= link_to(toy[:name], toy_path(toy[:id])) %></p>
+<% end %>

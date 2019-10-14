@@ -1,0 +1,22 @@
+<%= render("nav", toys: @toys) %>
+<h1>Create A New Toy</h1>
+<form method="POST" action="<%= toys_path %>">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+<div>
+    <label for="name">Toy Name</label>
+    <input type="text" name="toy[name]" id="name" />
+</div>
+    <label for="description">Toy Description</label>
+    <textarea rows="10" cols="20" name="toy[description]" id="description">What does the toy do?</textarea>
+<div>
+    <label for="date">Toy Release Date</label>
+    <input type="date" name="toys[date]" id="date" />
+</div>
+<div>
+    <label for="user">Toy User</label>
+    <input type="text" name="toys[user]" id="user" />
+</div>
+<div>
+    <input type="submit" value="Submit Toy" />
+</div>
+</form>
